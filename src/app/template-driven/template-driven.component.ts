@@ -29,12 +29,53 @@ export class TemplateDrivenComponent implements OnInit {
   array:any=[];
   // objectKeys=Object.keys;
   submitted = false;
+  display_table =false;
   submitdata(data:any){
       if(data.valid){
         // console.log("yash");
         // this.formData.push(this.userForm.value)
         // var array=[data];
         this.submitted=true;
+        // this.array.push(data.value)
+      //   // console.log(this.array)
+
+      //   let values = data.value;
+        
+
+      //   console.log(this.array);
+      //   let obj: any = {
+          
+      //     username: values.username,
+      //     college:values.college,
+      //     cgpa: values.cgpa,
+      //     year:values.year,
+      //     doj:values.doj,
+      //     skills: values.skills,
+      //     file :values.file
+      //   };
+      // //  let  use = {
+      // //     username: "",
+      // //     college: "",
+      // //     cgpa: "",
+      // //     year: "",
+      // //     doj:"",
+      // //     skills: "",
+      // //     file :""
+        // }
+    
+      //   this.array.push(Object.values(obj));
+        // data.reset();
+      //   console.log(this.array)
+      // this.adddata()
+      }
+      else{
+        alert("Please Enter Correct Details");
+      }
+  }
+
+  adddata(data:any){
+    this.submitted=false;
+    this.display_table=true;
         // this.array.push(data.value)
         // console.log(this.array)
 
@@ -65,11 +106,6 @@ export class TemplateDrivenComponent implements OnInit {
         this.array.push(Object.values(obj));
         // data.reset();
         console.log(this.array)
-      }
-      else{
-        console.log("invalid");
-      }
+        data.reset();
   }
-
-
 }

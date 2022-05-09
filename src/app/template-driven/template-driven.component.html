@@ -146,7 +146,7 @@
           <button type="submit" class="btn btn-primary mx-3 mt-4 ">Submit</button>
           <div *ngIf="submitted" class="d-inline">
             <button type="reset" class="btn btn-primary mx-3 mt-4">Reset</button>
-            <button type="submit" class="btn btn-primary mx-3 mt-4">Add</button>
+            <button type="submit" class="btn btn-primary mx-3 mt-4" (click)="adddata(userForm)">Add</button>
           </div>
          
       </form>
@@ -154,7 +154,7 @@
         </div>
     
         <!-- table -->
-        <div *ngIf ="submitted">
+        <div *ngIf ="display_table">
             <div class="col m-5 p-5">
                 <div class="p-5 border bg-light" id="sec-tabs">
                   <div class="p-3 mb-5 border rounded-pill bg-dark text-warning text-center">
@@ -164,13 +164,13 @@
                     <table class="table">
                       <thead>
                         <tr>
-                          <th scope="col">Sno.</th>
                           <th scope="col">Name</th>
-                          <th scope="col">Phone</th>
-                          <th scope="col">Email</th>
-                          <th scope="col">Email</th>
-                          <th scope="col">Email</th>
-                          <th scope="col">Email</th>
+                          <th scope="col">College</th>
+                          <th scope="col">CGPA</th>
+                          <th scope="col">Passing year</th>
+                          <th scope="col">Joining Date</th>
+                          <th scope="col">Skills</th>
+                          <th scope="col">Resume</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -179,9 +179,6 @@
                             <td *ngFor="let items of element">
                               {{items}}
                             </td>
-                            <!-- <td  *ngFor="let element of objectKeys(array)" >
-                              {{element.value}}
-                            </td> -->
                         </tr>
                       </tbody>
                      
@@ -191,7 +188,5 @@
               </div>
             </div>
         </div>
-        
-      <button class="mx-4" onclick="location.href = 'index.html'">Assignment-1</button>
 </div>
 
