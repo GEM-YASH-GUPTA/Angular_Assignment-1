@@ -7,6 +7,7 @@ import { TemplateDrivenComponent } from './template-driven/template-driven.compo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component'
+import {ReactiveFormsModule} from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component'
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,6 +12,10 @@ const routes: Routes = [
     path :"reactive",
     component : ReactiveFormComponent
   },
+  {
+    path : "",
+    component :TemplateDrivenComponent
+  }
 
 ];
 
